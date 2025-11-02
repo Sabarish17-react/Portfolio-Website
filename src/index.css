@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* 🌙 THEME COLORS */
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --primary: 250 47% 60%;
+    --primary-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+  }
+
+  .dark {
+    --background: 222 47% 4%;
+    --foreground: 213 31% 91%;
+    --card: 222 47% 8%;
+    --primary: 250 65% 65%;
+    --primary-foreground: 213 31% 91%;
+    --border: 217 33% 20%;
+  }
+
+  /* ✨ Smooth background & text transition */
+  html,
+  body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+}
+
+/* 🎞️ Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 1s ease-out forwards;
+  }
+}
+/* ========================================================
+   🎨 Add this in your global CSS (index.css)
+======================================================== */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
